@@ -35,7 +35,7 @@ while loop:
             if grade > 80:
                 grades_count += 1
                 print(f"\n{grade}")
-        print(f"\ngrades_count")
+        print(f"\n{grades_count}")
     elif selection == "3":
         print("\nSTATS")
         highest_grade = max(grades_list)
@@ -45,11 +45,10 @@ while loop:
         print(f"Lowest Grade: {highest_grade}%")
         print(f"Average Grade: {average_grade}%")
     elif selection == "4":
-        for grade in grades_list:
-            print(grade)
-            grade = random.randint(1, 99)
+        print(grades_list)
+        for i in range(len(grades_list)):
+            grades_list[i] = random.randint(1, 99)
+        print(grades_list)
         print("GRADES HAVE BEEN RANDOMIZED")
-        for grade in grades_list:
-            print(grade)
     elif selection == "5":
         loop = False
